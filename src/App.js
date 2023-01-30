@@ -20,10 +20,10 @@ export default function Board() {
 
   const nextSquares = squares.slice();
     if (xIsNext){
-      nextSquares[i] = "X";
+      nextSquares[i] = "1";
     }
     else {
-      nextSquares[i] = "O";
+      nextSquares[i] = "0";
     }
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
@@ -37,7 +37,7 @@ export default function Board() {
       status = "Winner: " + winner;
     }
     else {
-      status = "Next Player: " + (xIsNext ? 'X' : 'O');
+      status = "Next Player: " + (xIsNext ? '1' : '0');
     }
 
 
