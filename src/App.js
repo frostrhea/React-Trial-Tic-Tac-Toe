@@ -28,7 +28,9 @@ export default function Board() {
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
   }
-  
+
+ // const finalMove = 9;
+
   const winner = calculateWinner(squares);
     let status;
     if (winner) {
@@ -37,6 +39,7 @@ export default function Board() {
     else {
       status = "Next Player: " + (xIsNext ? 'X' : 'O');
     }
+
 
   return (
     <>
@@ -77,6 +80,9 @@ function calculateWinner(squares) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
+    }
+    else if(!squares.includes(null)){
+      return 'None';
     }
   }
   return null;
