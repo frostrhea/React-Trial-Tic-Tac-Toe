@@ -34,7 +34,7 @@ export default function Board() {
   const winner = calculateWinner(squares);
     let status;
     if (winner) {
-      status = "Winner: " + winner;
+      status = "You got it Player " + winner + "!";
     }
     else {
       status = "Next Player: " + (xIsNext ? '1' : '0');
